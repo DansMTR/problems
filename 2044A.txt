@@ -1,0 +1,46 @@
+
+#include <iostream>
+
+using namespace std;
+
+
+
+
+int main()
+{
+
+    int testcases;
+    int temp;
+   cin >>testcases;
+   int answ[testcases];
+   for(int i=0;i<testcases;i++)
+   {
+       int n ;
+       answ[i]=0;
+       cin >>n ;
+       temp =n-1;
+       for(int j=1;j<n;j++)
+       {
+       //cout <<(j+(n-j))<<"\n";
+        if((j+(n-j))==n)
+        answ[i]++;
+       }
+
+}
+
+
+
+
+
+   for(int k=0;k<testcases;k++)
+{
+cout<<answ[k]<<"\n";;
+
+}
+
+
+
+
+	return 0 ;
+}
+
