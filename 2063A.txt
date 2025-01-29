@@ -1,0 +1,73 @@
+#include <iostream>
+
+using namespace std;
+bool iprime(int a)
+{
+ if (n == 0 || n == 1) {
+    is_prime = false;
+  }
+
+  // loop to check if n is prime
+  for (i = 2; i <= n/2; ++i) {
+    if (n % i == 0) {
+      is_prime = false;
+      break;
+    }
+  }
+
+return is_prime;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+    int testcases;
+    int temp1,temp2;
+    int counter =0;
+    bool flag;
+   cin >>testcases;
+   int answ[testcases];
+   for(int i=0;i<testcases;i++)
+   {
+       int a,b ;
+       cin >>a>>b ;
+       answ[i]=0;
+       if(a==b)
+       break;
+       for(int j=b;j>=(b/2);j--)
+        for(int t=a;t<(b/2);t++)
+        {
+
+
+        }
+
+   }
+
+
+
+
+   for(int k=0;k<testcases;k++)
+{
+cout<<answ[k]<<"\n";
+
+}
+
+
+
+	return 0 ;
+}
+
