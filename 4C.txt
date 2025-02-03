@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main()
+{
+    vector<string> data_base;
+    vector<int> data_base_n;
+    int n ;
+    string name;
+    int m;
+    bool flag= false;
+
+    cin>>n;
+
+    cin >>name;
+    data_base.push_back(name);
+    data_base_n.push_back(1);
+    n--;
+    cout<<"OK\n";
+    while(n>0){
+        cin >>name;
+        for(int i =0;i<data_base.size();i++)
+        {
+            if(data_base[i]==name)
+            {
+                m = data_base_n[i];
+                name += to_string(m);
+                data_base_n[i] ++;
+                data_base.push_back(name);
+                data_base_n.push_back(1);
+                cout <<name<<"\n";
+                flag = true;
+                break;
+            }
+
+        }
+        if (!flag)
+        {
+             data_base.push_back(name);
+             data_base_n.push_back(1);
+             cout<<"OK\n";
+
+        }
+        flag = false;
+        n--;
+    }
+    return 0;
+}
+

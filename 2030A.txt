@@ -1,0 +1,39 @@
+#include <iostream>
+ 
+#include <vector>
+#include <algorithm>
+using namespace std;
+ 
+int main ()
+{
+ 
+    int n;
+    int element;
+    int arra_size;
+    vector<int> arraya;
+    int maximum;
+    int minimum;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arra_size;
+        cin>>element;
+        arraya.push_back(element);
+        minimum=element;
+        maximum=element;
+        for(int j=0;j<arra_size-1;j++)
+        {
+            cin>>element;
+            if(element >maximum )
+                maximum=element;
+            else if(element <minimum )
+                minimum=element;
+        }
+        cout<<((arra_size-1)*maximum)-((arra_size-1)*minimum)<<"\n";
+ 
+    }
+ 
+ 
+ 
+    return 0 ;
+}

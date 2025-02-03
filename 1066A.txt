@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+#include <string.h>
+using namespace std;
+
+
+
+int main() {
+    int L;
+    int v;
+    int l;
+    int r;
+    int t;
+    int countt;
+    cin>>t ;
+    int a[t];
+    for(int j=0;j<t;j++)
+    {
+        cin>>L>>v>>l>>r;
+        a[j]=L/v;
+            if(l==1)
+            countt=(r/v) ;
+            else if ((l%v)==0)
+                countt=((r/v) - (l/v))+1;
+            else
+            countt=((r/v) - (l/v));
+
+        a[j]-=countt;
+
+
+    }
+    for(int i=0;i<t;i++)
+    {
+        cout <<a[i]<<"\n";
+    }
+
+    return 0;
+}

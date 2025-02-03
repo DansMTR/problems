@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int getlength(string a )
+{
+
+    int i = 0 ;
+    while(a[i]!='\0')
+    {
+        i++;
+    }
+    return i ;
+}
+int main()
+{
+
+    int n ;
+    cin >> n;
+    int i  =0 ;
+    string a[n];
+    while(i<n)
+       {
+           cin>>a[i] ;
+           i ++;
+       }
+    i=0;
+    while(i<n)
+       {
+            if(getlength(a[i])>(10))
+            {
+                cout<<a[i][0]<<getlength(a[i])-2<<a[i][getlength(a[i])-1]<<endl;
+            }
+            else
+                cout<<a[i]<<endl;
+
+            i++ ;
+       }
+
+       return 0 ;
+}
