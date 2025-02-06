@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+void  solve ()
+{
+      int n,test;
+      int counter =0;
+      int product=1;
+      int mini=10;
+      cin>>n;
+      for(int i=0;i<n;i++)
+      {
+        cin>>test;
+        if(test ==0)
+        {
+        counter ++;
+        if(counter>1)
+            {
+            i++;
+                while(i<n)
+                {
+                    cin>>test;
+                    i++;
+                }
+                cout<<0<<"\n";
+                return;
+            }
+        }
+
+        if(mini>test)
+        {
+            mini=test;
+        }
+        if(test!=0)
+            product*=test;
+
+
+
+      }
+      if(mini !=0)
+      product/=mini;
+      product*=(mini+1);
+      cout<<product<<"\n";
+      return ;
+
+}
+
+int main()
+{
+
+    int testcases;
+    cin>>testcases;
+    while(testcases)
+    {
+        solve();
+        testcases --;
+
+    }
+
+
+
+return 0;
+}
