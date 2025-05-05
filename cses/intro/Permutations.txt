@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define fastio() ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+ 
+void print_odds(int i) {
+    if (i < 1) return;
+    if (i % 2 != 0) cout << i << " ";
+    print_odds(i - 1);
+}
+ 
+void print_evens(int i) {
+    if (i < 1) return;
+    if (i % 2 == 0) cout << i << " ";
+    print_evens(i - 1);
+}
+ 
+int main() {
+    fastio();
+    int t;
+    cin >> t;
+    if(t==3 || t==2)
+    {
+    cout<<"NO SOLUTION";
+    return 0;
+        
+    }
+    print_odds(t);
+    print_evens(t);
+ 
+    return 0;
+}

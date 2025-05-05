@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Type shortcuts
+#define ll long long
+#define ull unsigned long long
+#define ld long double
+ 
+// Common macros
+#define pb push_back
+#define mp make_pair
+#define F first
+#define S second
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+ 
+// For loops
+#define rep(i,a,b) for(int i = (a); i < (b); ++i)
+#define per(i,a,b) for(int i = (a); i >= (b); --i)
+ 
+#define fastio() ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+ 
+const ll INF = 1e18;
+const int MOD = 1e9+7;
+const int N = 2e5+5; // Maximum size for arrays
+ 
+ 
+ 
+int main() {
+    fastio();
+    /*
+    int t = 1;
+    cin >> t;
+ 
+    while(t--) {
+ 
+ 
+    }
+*/
+ll n;
+ 
+ll maxi=1;
+ll test =0;
+string a;
+cin>>a;
+test++;
+rep(i,1,a.size())
+{
+    if(a[i]==a[i-1])
+        test++;
+    else
+    {
+        if(test>maxi)
+            maxi=test;
+        test=1;
+    }
+ 
+}
+  if(test > maxi)
+        maxi = test;
+cout<<maxi;
+ 
+    return 0;
+}

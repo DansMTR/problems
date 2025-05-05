@@ -1,0 +1,5 @@
+g++ test.cpp -o test.exe; .test.exe
+ssh -T git@github.com
+git remote -v 
+git remote set-url origin git@github.com:your-username/your-repo.git
+git@github.com:DansMTR/problems.git
