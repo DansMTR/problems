@@ -28,9 +28,20 @@ const int N = 2e5+5; // Maximum size for arrays
 
 void solve()
 {
-    int n,m,l,r;
-    cin>>n>>m>>l>>r;
-        cout<<l<<" "<<l+m<<"\n";
+    int n,m,l,r,seg,l1,r1;
+    cin>>l>>r;
+    seg=n+1;
+    deque<int> dq;
+    //deque<int>::iterator it = dq.begin();
+    rep(i,l,r)
+    {
+        dq.push_back(i); 
+    } 
+   for (auto it = dq.begin(); 
+              it != dq.end(); ++it)
+   {
+    cout<<*it<<" ";
+   }
     return;
 
 }
