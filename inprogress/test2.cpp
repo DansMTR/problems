@@ -1,4 +1,3 @@
-//number spiral problem in cses web
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,34 +28,11 @@ const int N = 2e5+5; // Maximum size for arrays
 
 void solve()
 {
-    ll r,c;
-    cin>>r>>c;
-   if(c>r)
-   {
-    if((c%2)==0)
-    {
-        cout<<((c-1)*(c-1))+r<<"\n";
-        return;
-    }
-    else
-    {
-        cout<<((c)*(c))+r-1<<"\n";  
-        return;
-    }
-   }
-   if(c<r)
-   {
-    if((r%2)==0)
-    {
-        cout<<((c)*(c))+r<<"\n";
-        return;
-    }
-    else
-    {
-        cout<<((c-1)*(c-1))+r<<"\n";
-        return;
-    }
-   }
+   int n;
+  
+   
+
+ 
    return;
 
 
