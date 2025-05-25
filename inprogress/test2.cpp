@@ -28,14 +28,47 @@ const int N = 2e5+5; // Maximum size for arrays
 
 void solve()
 {
-   int a,b,c;
-   cin>>a>>b>>c;
-   if((a+b)==c)
-   cout<<"+"<<"\n";
-  
-else
-   cout<<"-"<<"\n";
+   int n,t;
+   cin>>n;
+   vector<int> p;
+   vector<int> imp;
+   rep(i,0,n)
+   {
+    cin>>t;
+    if((t%2)==0)
+        p.pb(t);
+    else
+        imp.pb(t);
+   }
+   
+    if(p.size()<imp.size())
+      {
+            cout<<"NO"<<"\n";
+            return;
+        }
+   sort(imp.begin(), imp.end());
+   sort(p.begin(), p.end(), greater<int>());
+    //   for (const auto& element : p) {
+    //     cout << element << " ";
+    // }
+    // cout<<"\n";
+    //   for (const auto& element :imp) {
+    //     cout << element << " ";
+    // }
+    int sump=0;
+    int sumimp=0;
+    rep(i,0,imp.size())
+    {
+        sump+=p[i];
+        sumimp+=imp[i];
+        if(sump<=sumimp)
+        {
+            cout<<"NO"<<"\n";
+            return;
+        }
+    }
 
+cout<<"YES"<<"\n";
  return ;
 }
 
