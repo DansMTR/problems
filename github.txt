@@ -5,3 +5,5 @@ git remote add origin git@github.com:your-username/your-repo.git
 git remote set-url origin git@github.com:your-username/your-repo.git
 git@github.com:DansMTR/problems.git
 git push -u origin main --force
+cp test2.cpp ../codeforces/1807A.txt
+g++ test2.cpp -o test2.exe; ./test2.exe
