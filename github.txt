@@ -7,3 +7,5 @@ git@github.com:DansMTR/problems.git
 git push -u origin main --force
 cp test2.cpp ../codeforces/1807A.txt
 g++ test2.cpp -o test2.exe; ./test2.exe
+git add .
+git commit -m "Made some change"
