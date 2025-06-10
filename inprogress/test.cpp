@@ -1,6 +1,7 @@
-//number spiral problem in cses web
+//solving for :https://codeforces.com/contest/1807/problem/C
 #include <bits/stdc++.h>
 using namespace std;
+
 
 // Type shortcuts
 #define ll long long
@@ -29,34 +30,43 @@ const int N = 2e5+5; // Maximum size for arrays
 
 void solve()
 {
-    ll r,c;
-    cin>>r>>c;
-   if(c>r)
-   {
-    if((c%2)==0)
+    int n,counter,j,k;
+    string s;
+    cin>>n>>s;
+    n--;
+     cout<<s[1]<<"\n";
+    for(int i=0;i<n-1;i++)
     {
-        cout<<((c-1)*(c-1))+r<<"\n";
-        return;
-    }
-    else
+        k=i+1;
+        j=i+2;
+        //cout<<s[i]<<"\t"<<s[j]<<"\t"<<s[k]<<"\n";
+       
+       counter =0 ;
+        
+        if(s[i]==s[k])
+        {
+            cout<<s[i]<<"\t"<<s[k]<<"\n";
+            counter++;
+        }
+        if(s[i]==s[j])
+         {
+            cout<<s[i]<<"\t"<<s[j]<<"\n";
+            counter++;
+        }
+        
+        if(s[k]==s[j])
+         {
+            cout<<s[k]<<"\t"<<s[j]<<"\n";
+            counter++;
+        }
+    if(counter>=2)
     {
-        cout<<((c)*(c))+r-1<<"\n";  
+        cout<<"no";
         return;
+    } 
     }
-   }
-   if(c<r)
-   {
-    if((r%2)==0)
-    {
-        cout<<((c)*(c))+r<<"\n";
-        return;
-    }
-    else
-    {
-        cout<<((c-1)*(c-1))+r<<"\n";
-        return;
-    }
-   }
+
+ cout<<"yes";
    return;
 
 
