@@ -9,3 +9,12 @@ cp test2.cpp ../codeforces/1807A.txt
 g++ test2.cpp -o test2.exe; ./test2.exe
 git add .
 git commit -m "Made some change"
+
+//discard local changes
+git reset --hard
+git clean -fd
+
+git fetch origin
+git reset --hard origin/main
+
+ 
