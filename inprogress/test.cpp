@@ -34,7 +34,7 @@ void solve()
     string s;
     cin>>n>>s;
     n--;
-     cout<<s[1]<<"\n";
+  
     for(int i=0;i<n-1;i++)
     {
         k=i+1;
@@ -45,28 +45,28 @@ void solve()
         
         if(s[i]==s[k])
         {
-            cout<<s[i]<<"\t"<<s[k]<<"\n";
+            //cout<<s[i]<<"\t"<<s[k]<<"\n";
             counter++;
         }
-        if(s[i]==s[j])
+        else if(s[i]==s[j])
          {
-            cout<<s[i]<<"\t"<<s[j]<<"\n";
+            //cout<<s[i]<<"\t"<<s[j]<<"\n";
             counter++;
         }
         
-        if(s[k]==s[j])
+        else if(s[k]==s[j])
          {
-            cout<<s[k]<<"\t"<<s[j]<<"\n";
+            //cout<<s[k]<<"\t"<<s[j]<<"\n";
             counter++;
         }
-    if(counter>=2)
+    if(counter==0)
     {
-        cout<<"no";
+        cout<<"no"<<"\n";;
         return;
     } 
     }
 
- cout<<"yes";
+ cout<<"yes"<<"\n";;
    return;
 
 
