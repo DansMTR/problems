@@ -1,4 +1,4 @@
-//solving for :https://codeforces.com/contest/1807/problem/C
+//solving for :https://codeforces.com/contest/2131/problem/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -30,45 +30,7 @@ const int N = 2e5+5; // Maximum size for arrays
 
 void solve()
 {
-    int n,counter,j,k;
-    string s;
-    cin>>n>>s;
-    n--;
-  
-    for(int i=0;i<n-1;i++)
-    {
-        k=i+1;
-        j=i+2;
-        //cout<<s[i]<<"\t"<<s[j]<<"\t"<<s[k]<<"\n";
-       
-       counter =0 ;
-        
-        if(s[i]==s[k])
-        {
-            //cout<<s[i]<<"\t"<<s[k]<<"\n";
-            counter++;
-        }
-        else if(s[i]==s[j])
-         {
-            //cout<<s[i]<<"\t"<<s[j]<<"\n";
-            counter++;
-        }
-        
-        else if(s[k]==s[j])
-         {
-            //cout<<s[k]<<"\t"<<s[j]<<"\n";
-            counter++;
-        }
-    if(counter==0)
-    {
-        cout<<"no"<<"\n";;
-        return;
-    } 
-    }
-
- cout<<"yes"<<"\n";;
-   return;
-
+   
 
 }
 
